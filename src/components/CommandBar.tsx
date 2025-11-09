@@ -78,10 +78,10 @@ export function CommandBar({ isOpen, onClose }: CommandBarProps) {
         setTimeout(() => {
           if (
             window.userflow &&
-            process.env.VITE_USERFLOWJS_TEAM_MANAGEMENT_FLOW
+            import.meta.env.VITE_USERFLOWJS_TEAM_MANAGEMENT_FLOW
           ) {
             window.userflow.start(
-              process.env.VITE_USERFLOWJS_TEAM_MANAGEMENT_FLOW
+              import.meta.env.VITE_USERFLOWJS_TEAM_MANAGEMENT_FLOW
             );
           }
           onClose();
